@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour
         {
             hasPowerup = true;
             Destroy(other.gameObject);
+            StartCoroutine(PoweupCountdownRoutine());
         }
     }
     private void OnCollisionEnter(Collision collision)
@@ -42,5 +43,11 @@ public class PlayerController : MonoBehaviour
                 + " with powerup set to " + hasPowerup);
             enemyRigidbody.AddForce(awayFromPlayer * powerupStrength, ForceMode.Impulse);
         }
+    }
+
+    IEnumerator PoweupCountdownRoutine()
+    {
+        yield return new WaitForSeconds(7);
+        hasPowerup = false;
     }
 }
