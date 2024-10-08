@@ -7,10 +7,20 @@ public class SpawnManager : MonoBehaviour
 {
     public GameObject enemyPrefab;
     private float spawnRange = 9;
+    public int enemyCount;
 
     void Start()
     {
         SpawnEnemyWave(3);
+    }
+
+    void Update()
+    {
+        enemyCount = FindObjectsOfType<Enemy>().Length;
+        if (enemyCount == 0)
+        {
+            SpawnEnemyWave(1);
+        }
     }
 
     private Vector3 GenerateSpawnPosition ()
