@@ -122,6 +122,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &100374713 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7599762264898546042, guid: 51027382e9e24914f87d16c12e56e1a0, type: 3}
+  m_PrefabInstance: {fileID: 5007570846198654524}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &245963551
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -351,6 +356,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   hasPowerup: 0
+  powerupIndicator: {fileID: 100374713}
 --- !u!1 &1211016355
 GameObject:
   m_ObjectHideFlags: 0
@@ -582,6 +588,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 4973219149130742977, guid: 9870c1a8569fc06488511891e90099ad, type: 3}
+  enemyCount: 0
+  waveNumber: 1
 --- !u!1001 &1403545340
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -714,7 +722,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e27fb3677daa83144bf4b66ecee7c4ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 50
+  rotationSpeed: 70
 --- !u!4 &1754240212
 Transform:
   m_ObjectHideFlags: 0
