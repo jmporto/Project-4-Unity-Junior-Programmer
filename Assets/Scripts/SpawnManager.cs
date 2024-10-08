@@ -10,11 +10,16 @@ public class SpawnManager : MonoBehaviour
 
     void Start()
     {
+        Instantiate(enemyPrefab, GenerateSpawnPosition(), enemyPrefab.transform.rotation);
+    }
+
+    private Vector3 GenerateSpawnPosition ()
+    {
         float spawnPosX = UnityEngine.Random.Range(-spawnRange, spawnRange);
         float spawnPosZ = UnityEngine.Random.Range(-spawnRange, spawnRange);
 
-        Vector3 randomPos = new Vector3(spawnPosX, 0 , spawnPosZ);
+        Vector3 randomPos = new Vector3(spawnPosX, 0, spawnPosZ);
 
-        Instantiate(enemyPrefab, randomPos, enemyPrefab.transform.rotation);
+        return randomPos;
     }
 }
