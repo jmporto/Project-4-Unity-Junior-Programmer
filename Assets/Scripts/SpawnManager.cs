@@ -10,7 +10,7 @@ public class SpawnManager : MonoBehaviour
 
     void Start()
     {
-        SpawnEnemyWave();
+        SpawnEnemyWave(3);
     }
 
     private Vector3 GenerateSpawnPosition ()
@@ -23,9 +23,9 @@ public class SpawnManager : MonoBehaviour
         return randomPos;
     }
 
-    void SpawnEnemyWave()
+    void SpawnEnemyWave(int enemiesToSpawn)
     {
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < enemiesToSpawn; i++)
         {
             Instantiate(enemyPrefab, GenerateSpawnPosition(), enemyPrefab.transform.rotation);
         }
